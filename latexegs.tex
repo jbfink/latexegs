@@ -33,37 +33,41 @@
 \begin{frame}
 	Why choose typesetting over (most) word processing?
 	\begin{itemize}
-		\item The source is \textbf{portable}
+		\item The source is \textit{portable}.
 		\pause
-		\item Item 2
+		\item It is \textit{way} easier to do things like formulas, images, and tables.
 		\pause
-		\item Item 3 
+		\item It allows you to \textit{write} without worrying what the writing \textit{looks like}.
+		\pause
+		\item \LaTeX{} can produce some \textit{beautiful} output. Even the stock PDF output is pleasant!
 	\end{itemize}
 	
 	\note{Portable as in ascii text. There is simply no other format extant that will guarantee as much interoperability and long-term preservation as straight up text will. It can be version controlled. It can be put anywhere. It will definitely outlast me and probably you.}
 
 \end{frame}
 
+
+
 \begin{frame}
 	\begin{itemize}
-		\item Worry about \textbf{content}, not (or not much) about \textbf{form}.
+		\item Worry about \textbf{content}, not (or not as much) about \textbf{form}.
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+	Why choose word processing \textit{over} typesetting?
+\end{frame}
+
+\begin{frame}
+	\begin{itemize}
+		\item Everybody everywhere uses Word.
 	\end{itemize}
 \end{frame}
 
 \begin{frame}
-	\begin{itemize}
-		\item Long term preservation	
-	\end{itemize} 
-	\note{Bloomsday book example? Agrippa? Or just talk about how it is about 100000x easier to do programmy-type things -- like git version control etc -- on plain text vs. some sort of weird homunculus like word}
-\end{frame}
-
-\begin{frame}
-	%insert word doing dumb thing here
-\end{frame}
-
-\begin{frame}
-	Why choose word processing \textit{over} typesetting?
-	\note{this is a note.}
+	\includegraphics[height=6cm]{beamer-manual}
+	\note{This is the manual for the Beamer, the document class for slide decks. It's not the full LaTeX manual, it's just for slides. I want to draw your attention to the upper left hand corner -- that's 234 pages. Of manual. Just for slides!}
 \end{frame}
 
 \begin{frame}
@@ -82,16 +86,20 @@
 
 \begin{frame}
 	\includegraphics[height=8cm]{latex-structure}
-	\note{Let's take a look here. This is the beginning of my slide deck for this very talk -- yup, that's right, you can actually write slides in LaTeX just like any other document. First, you have the preamble -- this sets up your document. Let's go through it line by line, shall we?}
+	\note{Let's take a look here. This is the beginning of my slide deck for this very talk -- yup, that's right, you can actually write slides in LaTeX just like any other document. First, you have the preamble -- this sets up your document. Let's go through it, shall we?}
 \end{frame}
 
 \begin{frame}[fragile=singleslide]
-	\verb|\documentclass{beamer}|
+\begin{Verbatim}
+\documentclass{beamer}
+\usetheme{Berlin}
+\usepackage{verbatim}
+\usepackage{fancyvrb}
+%comments start with a % sign.
+\end{Verbatim}
+\note{Beamer includes a lot of packages by default so when you write a paper in LaTeX you might find yourself using way more usepackage statements -- for example, including graphics is not a default package in many LaTeX document classes}.
 \end{frame}
 
-\begin{frame}[fragile=singleslide]
-	\verb|\usetheme{Berlin}|
-\end{frame}
 
 \begin{frame}[fragile=singleslide]
 	%Verbatim here instead of verbatim as Verbatim is fancyvrb, which I needed for font size changes. Phew!
@@ -103,6 +111,7 @@
 \institute{McMaster University}
 \date{July 19th, 2022}
 	\end{Verbatim}
+	\note{The percent is a comment, of course. Title is title of the presentation -- could be title of a paper or a book, but we're using Beamer, so it's a presentation -- a subtitle, the author, the institute, and the date.}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -112,11 +121,11 @@
 		\pause
 		\item A \textbf{command}, like \textit{includegraphics}
 		\pause
-		\item The information fed to the command, in \verb|{}|, like \verb|{imagename}|
-		\pause
 		\item \textbf{options} passed to the command, in \verb|[]|, like \verb|[height=8cm]|
 		\pause
-		\item So, the command \verb|\includegraphics{imagename}[height=8cm]| will display the image titled \textit{imagename}, scaled to 8cm height.
+		\item The information fed to the command, in \verb|{}|, like \verb|{imagename}|
+		\pause
+		\item So, the command \verb|\includegraphics[height=8cm]{imagename}| will display the image titled \textit{imagename}, scaled to 8cm height.
 	\end{itemize}
 	\note{Whoof! A lot to take in. Note that, in LaTeX, at least when you're inserting images, you do not specify an image extension -- e.g., no imagename.png or whatever, just imagename.}
 \end{frame}
