@@ -31,6 +31,7 @@
 
 	\begin{frame}
 		Who am I?
+		\note{I'm John Fink, Digital Scholarship Librarian at the Mills Library. I am, quite thoroughly, not an engineer or a scientist.}
 	\end{frame}
 
 \begin{frame}
@@ -113,6 +114,25 @@
 \end{frame}
 
 \begin{frame}
+	So what is \LaTeX?
+	\pause
+	It's \TeX{} with added sauce:
+	\pause
+	\begin{itemize}
+		\item Optimized for publishing
+		\pause
+		\item Numbering, cross-referencing
+		\pause
+		\item Tables and figures
+		\pause
+		\item Page layout
+		\pause
+		\item Bibliographies
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
 	The \textbf{structure} of a \LaTeX{} document.
 	\note{a LaTeX document is *just text*. You can edit it with anything that edits plain text and doesn't mangle it, you can put it in version control, you can copy it anywhere, you can be assured that -- as plain text -- it will probably be viewable, at least as text, for the forseeable future (my lifetime, if not yours at least)}
 \end{frame}
@@ -189,12 +209,32 @@
 
 \begin{frame}[fragile]{Doing Math Stuff in \LaTeX}
 	\begin{itemize}
-		\item Inline formulas are done with \verb|$..$|
+		\item Inline formulas are done with \verb|$..$| or \verb|\..\| or \verb|\begin{math}..\end{math}|
+		\pause
+		\item (these are all, as far as I know, identical in use)
 		\pause
 		\item e.g. the universal law of gravitation: $F=\frac{Gm_1 m_2}{r^2}$.
 		\pause
 		\item In code: \verb|$F=\frac{Gm_1 m_2}{r^2}$.|
 	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Doing Math Stuff in \LaTeX}
+	\begin{itemize}
+		\item Display mode formulas are done with \verb|\..\|, \verb|\begin{displaymath}..\end{displaymath}|, \verb|\begin{equation}..\end{equation}|
+\end{itemize}
+\end{frame}
+	
+\begin{frame}[fragile]
+	\begin{equation}
+		E=m
+	\end{equation}
+	\pause
+	\begin{Verbatim}
+		\begin{equation}
+			E=m
+		\end{equation}
+	\end{Verbatim}
 \end{frame}
 
 \begin{frame}{\LaTeX resources: Editors}
@@ -212,6 +252,16 @@
 \end{itemize}
 
 \end{frame}
+
+\begin{frame}{Signing up for Overleaf}
+	\begin{enumerate}
+		\item Go to www.overleaf.com/register
+		\item Sign up for an account (use whatever email you prefer)
+		\item Create a new blank project.
+		\item Type "done" in the chat.
+	\end{enumerate}
+\end{frame}
+
 
 \begin{frame}
 	%this is always the last slide

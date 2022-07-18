@@ -27,3 +27,5 @@ paper1-epub3/
 *.out
 *.snm
 *.toc
+*.t
+*.vrb
