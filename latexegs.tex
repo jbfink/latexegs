@@ -13,6 +13,7 @@
 % Share the pympress main presentation window using the share tray.
 \usepackage{verbatim}
 \usepackage{fancyvrb}
+\usepackage{tikz}
 
 %title page details:
 \title{\LaTeX{} Engineering Grad Society Presentation}
@@ -33,6 +34,23 @@
 	\end{frame}
 
 \begin{frame}
+	What can you do with \LaTeX{}?
+\end{frame}
+
+\begin{frame}
+	\begin{itemize}
+		\item Scholarly articles
+		\pause
+		\item Books and book chapters
+		\pause
+		\item Presentations (like this one!)
+		\pause
+		\item Resumes/CVs
+	\end{itemize}
+\end{frame}
+		
+
+\begin{frame}
 	What is the difference between \textit{word processing} and \textit{typesetting}?
 \end{frame}
 
@@ -41,7 +59,7 @@
 	\begin{itemize}
 		\item The source is \textit{portable}.
 		\pause
-		\item It is \textit{way} easier to do things like formulas, images, and tables.
+		\item It is \textit{way} easier to do things like formulas ($E=mc^2$), images, and tables.
 		\pause
 		\item It allows you to \textit{write} without worrying what the writing \textit{looks like}.
 		\pause
@@ -73,7 +91,7 @@
 		\pause
 		\item \LaTeX{} is a \textit{programming language}
 	\end{itemize}
-	\note{Programming language in both the good and bad senses of the term. Good: it's *precise*. It does what you ask it to do. It doesn't surprise you. Bad: OK, there's the *IDE* (or lack thereof), there's the fact if you omit a closing bracket your entire thing will just ... stop working. Programming!!!
+	\note{Programming language in both the good and bad senses of the term. Good: it's *precise*. It does what you ask it to do. It doesn't surprise you. Bad: OK, there's the *IDE* (or lack thereof), there's the fact if you omit a closing bracket your entire thing will just ... stop working. Programming!!!}
 \end{frame}
 
 \begin{frame}
@@ -141,9 +159,53 @@
 	\note{Whoof! A lot to take in. Note that, in LaTeX, at least when you're inserting images, you do not specify an image extension -- e.g., no imagename.png or whatever, just imagename.}
 \end{frame}
 
+
+
+\begin{frame}
+	Drawing in \LaTeX{} with the tikz package
+\end{frame}
+
+\begin{frame}[fragile=singleslide]
+\begin{Verbatim}[fontsize=\scriptsize]
+\begin{tikzpicture}
+\draw[gray, thick] (-1,2) -- (2,-4);
+\draw[gray, thick] (-1,-1) -- (2,2);
+\filldraw[black] (0,0) circle (2pt) node[anchor=west]{Intersection point};
+\end{tikzpicture}
+\end{Verbatim}
+\end{frame}
+
+\begin{frame}
+	\begin{tikzpicture}
+		\draw[gray, thick] (-1,2) -- (2,-4);
+		\draw[gray, thick] (-1,-1) -- (2,2);
+		\filldraw[black] (0,0) circle (2pt) node[anchor=west]{Intersection point};
+	\end{tikzpicture}
+\end{frame}	
+
+\begin{frame}{Doing Math Stuff in \LaTeX}
+	
+\end{frame}
+
+\begin{frame}{\LaTeX resources: Editors}
+\begin{itemize}
+	\item Anything that can edit plain text (Emacs, Vim, Notepad etc)
+	\item (but note you need a *compiler* to generate the actual output)
+	\item Compilers: Mik\TeX (Windows), Mac\TeX (MacOS), \TeX Live (Linux)
+	\pause
+	\item Purpose-built editors: \TeX{studio}, \TeX{maker}
+	\item (These will come with built-in support for compilers)
+	\pause
+	\item General IDEs: vscode, atom
+	\pause
+	\item Online: Overleaf (gdocs-esque)
+\end{itemize}
+
+\end{frame}
+
 \begin{frame}
 	%this is always the last slide
 	Any questions?
 \end{frame}
-	
+
 \end{document}
