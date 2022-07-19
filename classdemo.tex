@@ -1,10 +1,18 @@
 % for live demo
 \documentclass{article}
 \title{My first document}
-\author{Bob McScience}
+\author{John Fink}
 \date{July 19th, 2022}
+
+% packages and package setup go here
 \usepackage{tikz}
 \usepackage{chemfig}
+\usepackage[version=4]{mhchem}
+\usepackage{siunitx} % required for decimal point alignment
+\sisetup{
+	round-mode = places, % Rounds numbers
+	round-precision = 2, % to 2 places
+}
 
 
 \begin{document}
@@ -19,6 +27,43 @@
 	Footnotes are automagically numbered!\footnote{Wow!}
 
 % Tables
+% from https://latex-tutorial.com/tutorials/tables/
+% Rows can be added by adding a line after "3", e.g. like "4 & 3432.1234 & d \\"
+% Columns can be added by adding to the Value line like "& \textbf{Value 4}\\" and then specifying the label "& $\delta$ \\, and then adding more values to the rows "& d" etc.
+\begin{table}[h!]
+\begin{center}
+	\caption{Your first table.}
+	\label{tab:table1}
+	\begin{tabular}{l|c|r} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+		\textbf{Value 1} & \textbf{Value 2} & \textbf{Value 3}\\
+		$\alpha$ & $\beta$ & $\gamma$ \\
+		\hline
+		1 & 1110.1 & a\\
+		2 & 10.1 & b\\
+		3 & 23.113231 & c\\
+	\end{tabular}
+\end{center}
+\end{table}
+
+Now let's \textbf{align those decimals} with our \textit{siunitx} package.
+
+\begin{table}[h!]
+	\begin{center}
+		\caption{Your second table.}
+		\label{tab:table2}
+		\begin{tabular}{l|S|r} % <-- Note: middle value changed to S for centering
+			\textbf{Value 1} & \textbf{Value 2} & \textbf{Value 3}\\
+			$\alpha$ & $\beta$ & $\gamma$ \\
+			\hline
+			1 & 1110.1 & a\\
+			2 & 10.1 & b\\
+			3 & 23.113231 & c\\
+		\end{tabular}
+	\end{center}
+\end{table}
+
+
+
 
 % Math
 
