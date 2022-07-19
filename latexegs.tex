@@ -1,5 +1,5 @@
-
 \documentclass{beamer}
+%\documentclass[handout]{beamer} % set [handout] as an option to remove /pause breaks
 
 %\setbeameroption{show notes on second screen=right} % Make sure slide position is set to "right" in pympress also, or if using pdfpc, with --notes=right
 % Also, comment out the notes to produce slides for archiving, etc.
@@ -40,7 +40,7 @@
 	What can you do with \LaTeX{}?
 \end{frame}
 
-\begin{frame}
+\begin{frame}{What can you do with \LaTeX?}
 	\begin{itemize}
 		\item Scholarly articles
 		\pause
@@ -57,15 +57,19 @@
 
 \begin{frame}
 	What is the difference between \textit{word processing} and \textit{typesetting}?
+\note{}
 \end{frame}
 
 \begin{frame}
+	% A fun comparison of word vs. LaTeX here: https://mappingignorance.org/2015/04/06/word-or-latex-typesetting-which-one-is-more-productive-finally-scientifically-assessed/
 	Why choose typesetting over (most) word processing?
 	\begin{itemize}
-		\item The source is \textit{portable}.
+		\item The source is \textit{portable} and \textit{versionable}.
 		\pause
 		\item It is \textit{way} easier to do things like formulas ($E=mc^2$), images, and tables.
 		\pause
+		\item Easy to generate indices, bibliographies, cross references
+		\pause 
 		\item It allows you to \textit{write} without worrying what the writing \textit{looks like}.
 		\pause
 		\item \LaTeX{} can produce some \textit{beautiful} output. Even the stock PDF output is pleasant!
@@ -359,7 +363,9 @@ For \textit{typesetting} chemical formulae, we can use a package like \textit{mh
 
 \begin{frame}
 	%this is always the last slide
-	Any questions? jfink@mcmaster.ca
+	Any questions?\\ 
+	jfink@mcmaster.ca\\
+	https://github.com/jbfink/latexegs 
 	
 \end{frame}
 

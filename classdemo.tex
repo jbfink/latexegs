@@ -10,7 +10,7 @@
 \usepackage{chemfig}
 \usepackage[version=4]{mhchem}
 \usepackage{siunitx} % required for decimal point alignment
-\usepackage{mathtools}
+\usepackage{mathtools} % for eliminating automatic numbering of math
 
 %\usepackage{hyperref} % if you want your href email thing to work in the commented out author line.
 \sisetup{
@@ -51,12 +51,13 @@ No!!! We must \textbf{keep going}!! Here's the same box but ... better?
 	\draw (0,0) rectangle (4,4);
 \end{tikzpicture}
 
-A circle???
+A circle??? Centred?
 
-\begin{tikzpicture}
-	\draw (2,2) circle (3cm) node {circle?};
-\end{tikzpicture}
-
+\begin{center}
+	\begin{tikzpicture}
+		\draw (2,2) circle (3cm) node {circle?};
+	\end{tikzpicture}
+\end{center}
 
 % Tables
 % from https://latex-tutorial.com/tutorials/tables/
@@ -106,10 +107,22 @@ Remember, math can be done \textit{inline}! $f(x)=(x+a)(x+b)$\footnote{inline!!!
 	 \frac{1}{\sqrt{x}}
 \end{equation*}
 
+More math! I don't know what I'm doing! $k_{n+1} = n^2 + k_n^2 - k_{n-1}$
+
+
 
 
 % Chemistry
 % Chemfig and mhchem examples: https://en.m.wikibooks.org/wiki/LaTeX/Chemical_Graphics
+
+Chemistry!
+
+
+\chemfig{A-B}
+
+\chemfig{A<B}
+
+\chemfig{C(-[:0]H)(-[:90]H)(-[:180]H)(-[:270]H)}
 
 
 
