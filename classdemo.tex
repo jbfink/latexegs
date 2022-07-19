@@ -31,7 +31,7 @@
 
 % Diagrams with tikz
 % examples from https://www.overleaf.com/learn/latex/LaTeX_Graphics_using_TikZ%3A_A_Tutorial_for_Beginners_(Part_1)%E2%80%94Basic_Drawing 
-
+\section{Diagrams with tikz}
 Diagrams!!\\
 Start with \verb|\begin{tikzpicture}..\end{tikzpicture}|! Draw a line! Feel the rush!
 
@@ -63,6 +63,7 @@ A circle??? Centred?
 % from https://latex-tutorial.com/tutorials/tables/
 % Rows can be added by adding a line after "3", e.g. like "4 & 3432.1234 & d \\"
 % Columns can be added by adding to the Value line like "& \textbf{Value 4}\\" and then specifying the label "& $\delta$ \\, and then adding more values to the rows "& d" etc.
+\section{tables}
 \begin{table}[h!] % h! eliminates float
 \begin{center}
 	\caption{Your first table.}
@@ -100,7 +101,7 @@ Now let's \textbf{align those decimals} with our \textit{siunitx} package.
 
 % Math
 % See https://en.m.wikibooks.org/wiki/LaTeX/Mathematics
-
+\section{math}
 Remember, math can be done \textit{inline}! $f(x)=(x+a)(x+b)$\footnote{inline!!!} or set by itself using e.g. \verb|\begin{equation}...\end{equation}|:
 
 \begin{equation*} % The * suppresses the automatic numbering - mathtools provides this.
@@ -114,7 +115,7 @@ More math! I don't know what I'm doing! $k_{n+1} = n^2 + k_n^2 - k_{n-1}$
 
 % Chemistry
 % Chemfig and mhchem examples: https://en.m.wikibooks.org/wiki/LaTeX/Chemical_Graphics
-
+\section{chemistry}
 Chemistry!
 
 
@@ -123,6 +124,12 @@ Chemistry!
 \chemfig{A<B}
 
 \chemfig{C(-[:0]H)(-[:90]H)(-[:180]H)(-[:270]H)}
+
+\ce{H2O}
+
+\ce{NO3-}
+
+\ce{(NH4)2S)}
 
 
 
