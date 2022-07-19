@@ -10,7 +10,8 @@
 \usepackage{chemfig}
 \usepackage[version=4]{mhchem}
 \usepackage{siunitx} % required for decimal point alignment
-%\usepackage{amsmath} % prrrrooobably don't need this.
+\usepackage{mathtools}
+
 %\usepackage{hyperref} % if you want your href email thing to work in the commented out author line.
 \sisetup{
 	round-mode = places, % Rounds numbers
@@ -26,13 +27,42 @@
 % Footnote example
 	This is a sentence with a footnote!\footnote{A footnote}
 	
-	Footnotes are automagically numbered!\footnote{Wow!}
+	Footnotes are automagically numbered!\footnote{Wow!}\\
+
+% Diagrams with tikz
+% examples from https://www.overleaf.com/learn/latex/LaTeX_Graphics_using_TikZ%3A_A_Tutorial_for_Beginners_(Part_1)%E2%80%94Basic_Drawing 
+
+Diagrams!!\\
+Start with \verb|\begin{tikzpicture}..\end{tikzpicture}|! Draw a line! Feel the rush!
+
+\begin{tikzpicture}
+	\draw (0,0) -- (4,0);
+\end{tikzpicture}
+
+Draw a box! The excitement, will it ever stop?
+
+\begin{tikzpicture}
+	\draw (0,0) -- (4,0) -- (4,4) -- (0,4) -- (0,0);
+\end{tikzpicture}
+
+No!!! We must \textbf{keep going}!! Here's the same box but ... better?
+
+\begin{tikzpicture}
+	\draw (0,0) rectangle (4,4);
+\end{tikzpicture}
+
+A circle???
+
+\begin{tikzpicture}
+	\draw (2,2) circle (3cm) node {circle?};
+\end{tikzpicture}
+
 
 % Tables
 % from https://latex-tutorial.com/tutorials/tables/
 % Rows can be added by adding a line after "3", e.g. like "4 & 3432.1234 & d \\"
 % Columns can be added by adding to the Value line like "& \textbf{Value 4}\\" and then specifying the label "& $\delta$ \\, and then adding more values to the rows "& d" etc.
-\begin{table}[h!]
+\begin{table}[h!] % h! eliminates float
 \begin{center}
 	\caption{Your first table.}
 	\label{tab:table1}
@@ -68,12 +98,15 @@ Now let's \textbf{align those decimals} with our \textit{siunitx} package.
 
 
 % Math
+% See https://en.m.wikibooks.org/wiki/LaTeX/Mathematics
 
 Remember, math can be done \textit{inline}! $f(x)=(x+a)(x+b)$\footnote{inline!!!} or set by itself using e.g. \verb|\begin{equation}...\end{equation}|:
 
-\begin{equation}
+\begin{equation*} % The * suppresses the automatic numbering - mathtools provides this.
 	 \frac{1}{\sqrt{x}}
-\end{equation}
+\end{equation*}
+
+
 
 % Chemistry
 % Chemfig and mhchem examples: https://en.m.wikibooks.org/wiki/LaTeX/Chemical_Graphics
