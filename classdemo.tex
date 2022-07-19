@@ -1,6 +1,7 @@
 % for live demo
 \documentclass{article}
 \title{My first document}
+%\author{John Fink \\ email \href{mailto:jfink@mcmaster.ca}{jfink@mcmaster.ca}}
 \author{John Fink}
 \date{July 19th, 2022}
 
@@ -9,6 +10,8 @@
 \usepackage{chemfig}
 \usepackage[version=4]{mhchem}
 \usepackage{siunitx} % required for decimal point alignment
+%\usepackage{amsmath} % prrrrooobably don't need this.
+%\usepackage{hyperref} % if you want your href email thing to work in the commented out author line.
 \sisetup{
 	round-mode = places, % Rounds numbers
 	round-precision = 2, % to 2 places
@@ -16,9 +19,8 @@
 
 
 \begin{document}
-%2 Title data
+
 \maketitle
-%1 Basic document
 	This is a document!
 	
 % Footnote example
@@ -66,6 +68,12 @@ Now let's \textbf{align those decimals} with our \textit{siunitx} package.
 
 
 % Math
+
+Remember, math can be done \textit{inline}! $f(x)=(x+a)(x+b)$\footnote{inline!!!} or set by itself using e.g. \verb|\begin{equation}...\end{equation}|:
+
+\begin{equation}
+	 \frac{1}{\sqrt{x}}
+\end{equation}
 
 % Chemistry
 % Chemfig and mhchem examples: https://en.m.wikibooks.org/wiki/LaTeX/Chemical_Graphics
