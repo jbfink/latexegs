@@ -15,6 +15,7 @@
 \usepackage{fancyvrb}
 \usepackage{tikz}
 \usepackage{chemfig}
+\usepackage[version=4]{mhchem}
 
 %title page details:
 \title{\LaTeX{} Engineering Grad Society Presentation}
@@ -261,13 +262,13 @@
 
 %The chemistry stuff is here: https://www.overleaf.com/learn/latex/Chemistry_formulae
 
-\begin{frame}[fragile]{Chemical formulas in \LaTeX}
+\begin{frame}[fragile]{Chemical formulae in \LaTeX}
 
 	Chemical formulas are written similarly to math formulas, except support for chemical formulas is not built-in but requires a usepackage statement, like \verb|\usepackage{chemfig}|
 
 \end{frame}
 
-\begin{frame}[fragile]{Chemical formulas in \LaTeX}
+\begin{frame}[fragile]{Chemical formulae in \LaTeX}
 	\begin{itemize}
 		\item A simple example: \chemfig{O=H}
 		\pause
@@ -275,9 +276,9 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}[fragile]{Chemical formulas in \LaTeX}
+\begin{frame}[fragile]{Chemical formulae in \LaTeX}
 	\begin{itemize}
-		\item Angled formulas:
+		\item Angled formulae:
 		\pause
 		\item \chemfig{A-[1]B-[7]C}
 		\pause
@@ -285,7 +286,7 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}[fragile]{Chemical formulas in \LaTeX}
+\begin{frame}[fragile]{Chemical formulae in \LaTeX}
 	\begin{itemize}
 		\item Regular polygons
 		\pause
@@ -295,7 +296,7 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}[fragile]{Chemical formulas in \LaTeX}
+\begin{frame}[fragile]{Chemical formulae in \LaTeX}
 	\begin{itemize}
 		\item Branched molecules
 		\pause
@@ -303,8 +304,30 @@
 		\pause
 		\item \verb|\chemfig{H-C(-[2]H)(-[6]H)-C(=[1]O)-[7]H}|
 	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Chemical formulae in \LaTeX}
+
+For \textit{typesetting} chemical formulae, we can use a package like \textit{mhchem} in our preamble: \verb|\usepackage{mhchem}|
 
 \end{frame}
+
+\begin{frame}[fragile]{Chemical formulae in \LaTeX}
+	\begin{itemize}
+		\item \ce{3H2O}
+		\pause
+		\item \verb|\ce{3H2O}|
+		\pause
+		\item \ce{AgCl2-}
+		\pause
+		\item \verb|\ce{AgCl2-}|
+		\pause
+		\item \ce{H2_{(aq)}}
+		\pause
+		\item \verb|\ce{H2_{(aq)}}|
+	\end{itemize}
+\end{frame}
+
 \begin{frame}{\LaTeX resources: Editors}
 \begin{itemize}
 	\item Anything that can edit plain text (Emacs, Vim, Notepad etc)
